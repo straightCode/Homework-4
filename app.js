@@ -22,6 +22,7 @@ function getResults(){
         }
     }else{
         operations[operation]();
+        getResults();
     }
 }
 
