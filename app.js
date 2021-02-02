@@ -5,7 +5,8 @@ function getResults(){
     let operation = data.operation();
     if(operation !== 'history'){
         let a = data.a();
-        let b = function () {
+        let b;
+        b = function () {
             if (operation !== 'sin') {
                 return data.b();
             }
@@ -59,7 +60,7 @@ const getData = {
     getFirstOperand: function () {
             let operand;
             do{
-                operand = +prompt("Enter the first operand");
+                operand = +prompt("Enter the operand");
             }while(operand !== operand);
         return operand;
     },
@@ -68,7 +69,7 @@ const getData = {
         let operand;
             do{
                 operand = +prompt("Enter the second operand");
-            }while(operand !== operand && this.getOperation === 'sin');
+            }while(operand !== operand);
         return operand;
     }
 }
@@ -105,11 +106,6 @@ const data = {
 
     b: function(){
         return getData.getSecondOperand();
-        let b;
-        if(this.operation == 'sin'){
-            b = getData.getSecondOperand();
-        };
-        return b;
     },
 }
 getResults();
