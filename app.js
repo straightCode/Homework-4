@@ -76,52 +76,18 @@ const getData = {
 }
 
 const operations = {
-    sum: function (a, b) {
-        return a + b;
-    },
-    diff: function (a, b) {
-        return a - b;
-    },
-    mult: function (a, b) {
-        return a * b;
-    },
-    div: function (a, b) {
-        return a / b;
-    },
-    sin: function (a) {
-        return Math.sin(a);
-    },
-    history: function(){
-        alert(log.join('\n'));
-    },
+    sum:  (a, b) => a + b,
+    diff: (a, b) => a - b,
+    mult: (a, b) => a * b,
+    div:  (a, b) => a / b,
+    sin:  (a)    => Math.sin(a),
+    history: ()  => alert(log.join('\n')),
 }
 
 const data = {
-    operation: function(){
-        return getData.getOperation();
-    },
-
-    a: function(){
-        return getData.getFirstOperand();
-    },
-
-    b: function(){
-        return getData.getSecondOperand();
-    },
+    operation: () => getData.getOperation(),
+    a:         () => getData.getFirstOperand(),
+    b:         () => getData.getSecondOperand(),
 }
+
 getResults();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
